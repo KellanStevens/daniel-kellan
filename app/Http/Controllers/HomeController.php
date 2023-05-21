@@ -20,6 +20,11 @@ class HomeController extends Controller
     {
         return view('view_dates');
     }
+
+    public function login()
+    {
+        return view('login');
+    }
 }
 
 ?>
