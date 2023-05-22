@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#dxk-logo {
-    fill: white; /* Default fill color for light mode */
-}
-
-@media (prefers-color-scheme: dark) {
-    #dxk-logo {
-        fill: black; /* Fill color for dark mode */
-    }
-}

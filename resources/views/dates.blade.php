@@ -49,6 +49,6 @@ function showDates()
         </div>
     </div>
 </x-app-layout>
-{{--<livewire:table :config="App\Tables\DatesTable::class"/>--}}
+<livewire:table :config="App\Tables\DatesTable::class"/>
 
 
