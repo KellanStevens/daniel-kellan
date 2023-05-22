@@ -1,4 +1,4 @@
-<?
+<?php
     // array of commands
     $commands = array(
         'echo $PWD',
