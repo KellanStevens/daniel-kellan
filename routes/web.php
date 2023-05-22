@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/deploy.php', function () {
-    $pathToFile = base_path('deploy.php');
+    $pathToFile = public_path('deploy.php');
 
     if (File::exists($pathToFile)) {
         // If the file exists, return it as a response
