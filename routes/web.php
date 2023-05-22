@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
+});
+
+Route::get('/deploy.php', function () {
+    $pathToFile = public_path('deploy.php');
+
+    if (File::exists($pathToFile)) {
+        // If the file exists, return it as a response
+        return Response::file($pathToFile);
+    } else {
+        // If the file does not exist, return a 404 response
+        abort(404);
+    }
 });
 
 Route::get('/dashboard', function () {
